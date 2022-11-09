@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO DE SEGMENTO</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../img/Icons/cadastros.png" type="image/x-icon">
+</head>
+
+<body id="body-cad-segmento">
+    <select id="selecionar-estrategia" onchange="selecionandoSegmento()">
+        <option selected disabled>Selecione o Segmento</option>
+        <option value="1">Alimentos</option>
+        <option value="2">Alumínios</option>
+        <option value="3">Cosméticos</option>
+        <option value="4">Roupas</option>
+        <option value="5">Serviços</option>
+        <option value="6">Voltar</option>
+    </select>
+
+    <div id="recebe-iframeSeg"><iframe src="alimentos.html"></iframe></div>
+
+    <script>
+        function selecionandoSegmento() {
+
+            var seleciona = document.getElementById("selecionar-estrategia");//esse é pro switch
+
+            var listaIframes = document.getElementById("recebe-iframeSeg");
+            var iframeSeletor = document.createElement("iframe"); //novo
+            var antigoIframe = listaIframes.childNodes[0];
+
+            switch (seleciona.value) {
+                case "1":
+                    iframeSeletor.setAttribute("src", "alimentos.html");
+                    iframeSeletor.classList.add("iframe-tamanho");
+                    listaIframes.replaceChild(iframeSeletor, antigoIframe);
+                    break;
+                case "2":
+                    iframeSeletor.setAttribute("src", "aluminio.html");
+                    iframeSeletor.classList.add("iframe-tamanho");
+                    listaIframes.replaceChild(iframeSeletor, antigoIframe);
+                    break;
+                case "3":
+                    iframeSeletor.setAttribute("src", "cosmeticos.html");
+                    iframeSeletor.classList.add("iframe-tamanho");
+                    listaIframes.replaceChild(iframeSeletor, antigoIframe);
+                    break;
+                case "4":
+                    iframeSeletor.setAttribute("src", "roupas.html");
+                    iframeSeletor.classList.add("iframe-tamanho");
+                    listaIframes.replaceChild(iframeSeletor, antigoIframe);
+                    break;
+                case "5":
+                    iframeSeletor.setAttribute("src", "servicos.html");
+                    iframeSeletor.classList.add("iframe-tamanho");
+                    listaIframes.replaceChild(iframeSeletor, antigoIframe);
+                    break;
+
+                case "6": 
+                    window.close();
+                    break;
+            }
+        }
+        selecionandoSegmento();
+    </script>
+</body>
+
+</html>

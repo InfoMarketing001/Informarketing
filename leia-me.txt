@@ -1,0 +1,5 @@
+Olá, tudo bem? Utilize esses dados para logar no sistema:
+e-mail: market@etec.com
+senha: mark123
+
+Os dados do cadastro podem ser qualquer um (CNPJ, telefone e afins), mas é importante que os dados de login sejam seguidos.

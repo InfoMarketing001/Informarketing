@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Estratégia de Marketing</title>
+
+        <!-- ICONE -->
+        <link rel="icon" href="../../img/Icons/estrategias.png  " type="image/x-icon">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/style.css">
+    </head>
+
+    <body id="body-estrategia">
+        <select id="selecionar-estrategia" onchange="selecionandoEstrategia()">
+            <option selected disabled>Selecione o segmento</option>
+            <option value="1">Alimentos</option>
+            <option value="2">Alumínios</option>
+            <option value="3">Cosméticos</option>
+            <option value="4">Roupas</option>
+            <option value="5">Serviços</option>
+            <option value="6">Voltar</option>
+        </select>
+
+        <!-- recebe iframe do js -- record player é monstro -->
+        <div id="recebe-iframe"><iframe src="indexIframe.html"></iframe></div>
+
+        <script>        
+            function selecionandoEstrategia(){
+
+                var seleciona = document.getElementById("selecionar-estrategia");//esse é pro switch
+
+                var listaIframes = document.getElementById("recebe-iframe");
+                var iframeSeletor = document.createElement("iframe"); //novo
+                var antigoIframe = listaIframes.childNodes[0];
+                
+                switch (seleciona.value){
+                    case "1": 
+                        iframeSeletor.setAttribute("src", "../new-pages/alimentos.html");
+                        iframeSeletor.classList.add("iframe-tamanho");
+                        listaIframes.replaceChild(iframeSeletor, antigoIframe);
+                        break;
+                    case "2": 
+                        iframeSeletor.setAttribute("src", "../new-pages/aluminio.html");
+                        iframeSeletor.classList.add("iframe-tamanho");
+                        listaIframes.replaceChild(iframeSeletor, antigoIframe);
+                        break;
+                    case "3": 
+                        iframeSeletor.setAttribute("src", "../new-pages/cosmeticos.html");
+                        iframeSeletor.classList.add("iframe-tamanho");
+                        listaIframes.replaceChild(iframeSeletor, antigoIframe);
+                        break;
+                    case "4": 
+                        iframeSeletor.setAttribute("src", "../new-pages/roupas.html");
+                        iframeSeletor.classList.add("iframe-tamanho");
+                        listaIframes.replaceChild(iframeSeletor, antigoIframe);
+                        break;
+                    case "5": 
+                        iframeSeletor.setAttribute("src", "../new-pages/servicos.html");
+                        iframeSeletor.classList.add("iframe-tamanho");
+                        listaIframes.replaceChild(iframeSeletor, antigoIframe);
+                        break;
+
+                        case "6": 
+                        window.close();
+                        break;
+                }
+            }
+            
+            selecionandoEstrategia();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="../../img/Icons/cadastros.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper nav-style">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li style="margin-right: 50px;"><a href="../../../../index.html">Entrar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h2 class="cadastro">CADASTRO</h2>
+
+    <form id="form-cadastrar" method="post" class="form-cadastro-left" action="#">
+        <div class="form-cadastro-left">
+            <input type="text" placeholder="*Nome da empresa" required maxlength="45" minlength="5"><br><br>
+            <input type="text" placeholder="*Nome fantasia" required maxlength="45" minlength="5"><br><br>
+            <input type="text" name="cnpj" placeholder="*CNPJ" required><br><br>
+            <input type="text" placeholder="Inscrição estadual" maxlength="150"><br><br>
+            <input type="email" placeholder="*E-mail" required><br><br>
+            <input type="tel" placeholder="Telefone"><br><br>
+            <input type="password" placeholder="*Senha"><br><br>
+            <input type="password" placeholder="*Confirme senha">
+        </div>
+        <fieldset class="form-cadastro-right">
+            <legend style="color: rgb(27, 0, 71);">ENDEREÇO</legend>
+            <input type="text" placeholder="*CEP" minlength="8" maxlength="9" required><br><br>
+            <input type="text" placeholder="Número"><br><br>
+            <input type="text" placeholder="*Logradouro" required maxlength="35"><br><br>
+            <input type="text" placeholder="Complemento"><br><br>
+            <input type="text" placeholder="*Cidade" required><br><br>
+            <input type="text" placeholder="*Estado" required oninput="validarInput(event.data)"><br><br>
+        </fieldset>
+        <br><br><br>
+        <label class="termos"><input type="checkbox" style="opacity: 0.9; position: relative; "> Declaro que li e aceito
+            os termos de uso</label>
+        <a href="#" class="termos-link">Termos de uso</a>
+        <input type="submit" value="Cadastrar" class="btn-g" id="btn-cadastrar">
+    </form>
+
+
+    <!-- MODAL TERMOS -->
+    <dialog class="modal-termos">
+        <button class="btn-fechar-modal btn-close" style="background-color: transparent; border-radius: 10%;">X</button>
+        <h6><b>TERMOS E CONDIÇÕES GERAIS PARA USO DO APLICATIVO</b> </h6><br>
+        <p>
+            Os serviços do info marketing são fornecidos pela pessoa jurídica com a seguinte Razão
+            Social/nome:informações sobre marketing l com nome fantasia info marketing inscrito no CNPJ/CPF sob o
+            nº367.468.901\0001-99 titular da propriedade intelectual sobre software, website, aplicativos, conteúdos e
+            demais ativos relacionados à plataforma.
+            <br><br>
+            A plataforma caracteriza-se pela prestação do seguinte serviço: oferecer dados e pesquisas de mercado
+            específicas para empresas que desejam atuar em áreas que ainda não possuem dominância.
+            <br><br>
+            Serão utilizadas todas as soluções técnicas à disposição do responsável pela plataforma para permitir o
+            acesso ao serviço 24 (vinte e quatro) horas por dia, 7 (sete) dias por semana. No entanto, a navegação na
+            plataforma ou em alguma de suas páginas poderá ser interrompida, limitada ou suspensa para atualizações,
+            modificações ou qualquer ação necessária ao seu bom funcionamento
+            <br><br>
+            O usuário poderá cancelar a contratação dos serviços de acordo com os termos que forem definidos no momento
+            de sua contratação. Ainda, o usuário também poderá cancelar os serviços em até 7 (sete) dias após a
+            contratação, mediante contato com o ____, de acordo com o Código de Defesa do Consumidor (Lei no. 8.078/90).
+            <br><br>
+            Em caso de qualquer dúvida, sugestão ou problema com a utilização da plataforma, o usuário poderá entrar em
+            contato com o suporte, através do email infomarketingetec@gmail.com
+            <br><br>
+            Estes serviços de atendimento ao usuário estarão disponíveis nos seguintes dias e horários: 9:00 as 17:00
+            <br><br>
+            É de responsabilidade do usuário:
+            <br><br>
+            a) defeitos ou vícios técnicos originados no próprio sistema do usuário;
+            <br><br>
+            b) a correta utilização da plataforma, dos serviços ou produtos oferecidos, prezando pela boa convivência,
+            pelo respeito e cordialidade entre os usuários;
+            <br><br>
+            c) pelo cumprimento e respeito ao conjunto de regras disposto nesse Termo de Condições Geral de Uso, na
+            respectiva Política de Privacidade e na legislação nacional e internacional;
+            <br><br>
+            d) pela proteção aos dados de acesso à sua conta/perfil (login e senha).
+            <br><br>
+            É de responsabilidade da plataforma
+            <br><br>
+            a) indicar as características do serviço ou produto;
+            <br><br>
+            b) os defeitos e vícios encontrados no serviço ou produto oferecido desde que lhe tenha dado causa;
+            <br><br>
+            c) as informações que foram por ele divulgadas, sendo que os comentários ou informações divulgadas por
+            usuários são de inteira responsabilidade dos próprios usuários;
+            <br><br>
+            d) os conteúdos ou atividades ilícitas praticadas através da sua plataforma.
+
+        </p>
+    </dialog>
+
+    <script src="../../js/modalTermos.js"></script>
+    <script src="../../js/cadastrar.js"></script>
+</body>
+
+</html>
